@@ -1,0 +1,396 @@
+@import "syntax-variables";
+
+atom-text-editor, :host {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+}
+
+atom-text-editor .gutter, :host .gutter {
+  background-color: @syntax-gutter-background-color;
+  color: @syntax-gutter-text-color;
+}
+
+atom-text-editor .gutter .line-number.cursor-line, :host .gutter .line-number.cursor-line {
+  background-color: @syntax-gutter-background-color-selected;
+  color: @syntax-gutter-text-color-selected;
+}
+
+atom-text-editor .gutter .line-number.cursor-line-no-selection, :host .gutter .line-number.cursor-line-no-selection {
+  color: @syntax-gutter-text-color-selected;
+}
+
+atom-text-editor .wrap-guide, :host .wrap-guide {
+  color: @syntax-wrap-guide-color;
+}
+
+atom-text-editor .indent-guide, :host .indent-guide {
+  color: @syntax-indent-guide-color;
+}
+
+atom-text-editor .invisible-character, :host .invisible-character {
+  color: @syntax-invisible-character-color;
+}
+
+atom-text-editor .search-results .marker .region, :host .search-results .marker .region {
+  background-color: transparent;
+  border: @syntax-result-marker-color;
+}
+
+atom-text-editor .search-results .marker.current-result .region, :host .search-results .marker.current-result .region {
+  border: @syntax-result-marker-color-selected;
+}
+
+atom-text-editor.is-focused .cursor, :host(.is-focused) .cursor {
+  border-color: @syntax-cursor-color;
+}
+
+atom-text-editor.is-focused .selection .region, :host(.is-focused) .selection .region {
+  background-color: @syntax-selection-color;
+}
+
+atom-text-editor.is-focused .line-number.cursor-line-no-selection, atom-text-editor.is-focused .line.cursor-line, :host(.is-focused) .line-number.cursor-line-no-selection, :host(.is-focused) .line.cursor-line {
+  background-color: #00161B;
+}
+
+.comment, .comment.block.python .string.quoted {
+  color: #406A80;
+}
+
+.constant {
+  color: #FF3A83;
+}
+
+.entity {
+  color: #FFDD33;
+}
+
+.storage {
+  color: #F6F080;
+}
+
+.keyword {
+  color: #FFA826;
+}
+
+.string {
+  color: #4EE161;
+}
+
+.support {
+  color: #9DF39F;
+}
+
+.variable {
+  color: #FF7A9A;
+}
+
+.entity.other.inherited-class {
+  color: #F6F080;
+}
+
+.string.quoted .source, .string .constant, .string .source.ruby.embedded {
+  color: #9DF39F;
+}
+
+.string.regexp:not(.source.regexp) {
+  color: #FFC266;
+}
+
+.string .variable {
+  color: #F6F080;
+}
+
+.support.function {
+  color: #FFC266;
+}
+
+.support.constant {
+  color: #FF7A9A;
+}
+
+.meta.selector.css .entity.name.tag, .source.less .entity.name.tag.css, .keyword.control.html.elements, .source.scss .entity.name.tag.scss {
+  color: #9EFFFF;
+}
+
+.meta.selector.css .entity.other.attribute-name.id, .source.less .entity.other.attribute-name.id.css, .source.scss .entity.other.attribute-name.id.css {
+  color: #FFC266;
+}
+
+.meta.selector.css .entity.other.attribute-name.class, .source.less .entity.other.attribute-name.class.css, .source.scss .entity.other.attribute-name.class.css {
+  color: #F6F080;
+}
+
+.support.type.property-name.css {
+  color: #9DF39F;
+}
+
+.keyword.control.at-rule.import.css {
+  color: #F6F080;
+}
+
+.meta.property-value .support.constant.named-color.css, .meta.property-value .constant {
+  color: #FF3A83;
+}
+
+.keyword.other.unit.css, .source.less .keyword.unit.css, .source.scss .keyword.other.unit.scss {
+  color: #FF7A9A;
+}
+
+.keyword.other.important.css, .source.scss .keyword.other.important.scss {
+  font-weight: bold;
+  color: #FF3A83;
+}
+
+.meta.preprocessor.at-rule .keyword.control.at-rule {
+  color: #FFA826;
+}
+
+.entity.other.less.mixin {
+  color: #9DF39F;
+}
+
+.source.scss .entity.name.tag.reference.scss {
+  color: #FFA826;
+}
+
+.source.less .variable.other.less, .source.less .variable.declaration.less, .source.scss .variable.scss {
+  color: #CCB3FF;
+}
+
+.declaration.tag, .declaration.tag .entity, .meta.tag, .meta.tag .entity {
+  color: rgba(158, 255, 255, 0.67);
+}
+
+.entity.other.attribute-name.id.html {
+  color: #FF7A9A;
+}
+
+.entity.other.attribute-name.html {
+  color: #F6F080;
+}
+
+.punctuation.definition.tag.end, .punctuation.definition.tag.begin, .punctuation.definition.tag {
+  color: rgba(101, 164, 164, 0.53);
+}
+
+.constant.character.entity.html {
+  color: #F6F080;
+}
+
+.meta.function.method.with-arguments.ruby .variable.parameter.function.ruby {
+  color: #F6F080;
+}
+
+.meta.function.method.with-arguments.ruby .variable.parameter.function.ruby .punctuation.separator.object.ruby {
+  color: #F8F8F8;
+}
+
+.string.quoted.other .punctuation.definition {
+  color: #9DF39F;
+}
+
+.source.ruby .constant.other.symbol {
+  color: #CCB3FF;
+}
+
+.entity.name.type.class.ruby {
+  color: #9DF39F;
+}
+
+.entity.name.type.module.ruby {
+  color: #9DF39F;
+}
+
+.punctuation.separator.inheritance.ruby {
+  color: #F8F8F8;
+}
+
+.variable.other.constant.ruby {
+  color: #FF7A9A;
+}
+
+.variable.language.ruby, .keyword.other.special-method.ruby {
+  color: #FFC266;
+}
+
+.variable.other.block.ruby {
+  color: #F6F080;
+}
+
+.meta.class.ruby .entity.name.type.class.ruby .entity.other.inherited-class.ruby .punctuation.separator.inheritance.ruby {
+  color: #FFA826;
+}
+
+.text.html.ruby .text.html.basic .source.ruby.rails.embedded.html .punctuation.section.embedded.ruby {
+  color: rgba(255, 122, 154, 0.53);
+}
+
+.source.ruby.rspec .meta.rspec .string.quoted, .source.ruby.rspec .meta.rspec .string.ruby {
+  color: #7FD4F5;
+}
+
+.keyword.other.rspec {
+  color: #FFC266;
+}
+
+.keyword.other.rspec.behaviour, .keyword.other.rspec.example {
+  color: #FFDD33;
+}
+
+.entity.other.attribute-name.angular.html {
+  color: #FF3A83;
+}
+
+.source.angular.embedded.html {
+  color: #FFC266;
+  background-color: #00161B;
+}
+
+.variable.other.readwrite.instance.coffee {
+  color: #9DF39F;
+}
+
+.meta.brace.round.coffee, .meta.brace.square.coffee {
+  color: #F6F080;
+}
+
+.punctuation.section.embedded.coffee {
+  color: #4EE161;
+}
+
+.variable.assignment.coffee .variable.assignment.coffee {
+  color: #F6F080;
+}
+
+.meta.delimiter.method.period.coffee {
+  color: #FFA826;
+}
+
+.meta.brace.curly.coffee {
+  color: #9DF39F;
+}
+
+.comment.block.coffee .storage.type.annotation.coffeescript {
+  color: #7FD4F5;
+}
+
+.punctuation.definition.entry.yaml, .entity.name.tag.yaml {
+  color: #F6F080;
+}
+
+.variable.other.readwrite.js, .variable.other.object.js {
+  color: #F8F8F8;
+}
+
+.variable.function.js {
+  color: #F6F080;
+}
+
+.source.js .punctuation.separator.key-value.js {
+  color: #F8F8F8;
+}
+
+.constant.other.object.key.js .string.unquoted.label.js {
+  color: #CCB3FF;
+}
+
+.variable.function.constructor.js {
+  color: #FFDD33;
+}
+
+.source.json .meta.structure .string {
+  color: #9DF39F;
+}
+
+.source.json .meta .meta.structure .string {
+  color: #F6F080;
+}
+
+.source.json .meta .meta .meta.structure .string {
+  color: #FFC266;
+}
+
+.source.json .meta .meta .meta .meta.structure .string {
+  color: #FF7A9A;
+}
+
+.source.json .meta .meta .meta .meta .meta.structure .string {
+  color: #CCB3FF;
+}
+
+.source.json .meta .meta .meta .meta .meta .meta.structure .string {
+  color: #7FD4F5;
+}
+
+.source.json .meta .meta .meta .meta .meta .meta .meta.structure .string {
+  color: #FFDD33;
+}
+
+.source.json .meta .meta .meta .meta .meta .meta .meta .meta.structure .string {
+  color: #FFA826;
+}
+
+.source.regexp .string {
+  color: #F8F8F8;
+}
+
+.string.regexp .punctuation.definition.group {
+  color: #F6F080;
+}
+
+.sublimelinter.mark.error {
+  color: #D8290D;
+}
+
+.sublimelinter.gutter-mark {
+  color: #7FD4F5;
+}
+
+.sublimelinter.mark.warning {
+  color: #FFDD33;
+}
+
+.sublimelinter.underline.warning {
+  background-color: rgba(255, 0, 0, 0.31);
+}
+
+.sublimelinter.outline.warning {
+  background-color: rgba(223, 148, 0, 0.31);
+}
+
+.sublimelinter.outline.illegal {
+  background-color: rgba(255, 74, 82, 0.31);
+}
+
+.sublimelinter.outline.violation {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sublimelinter.underline.violation {
+  background-color: rgba(255, 0, 0, 0.31);
+}
+
+.sublimelinter.outline.notes {
+  background-color: rgba(255, 255, 170, 0.31);
+}
+
+.sublimelinter.underline.illegal {
+  background-color: rgba(255, 0, 0, 0.31);
+}
+
+.text .source {
+  background-color: rgba(176, 179, 186, 0.08);
+}
+
+.text.html.ruby .source {
+  background-color: rgba(177, 179, 186, 0.13);
+}
+
+.invalid {
+  background-color: #D8290D;
+}
+
+.block_cursor {
+  color: #F8F8F8;
+  background-color: #FF5E00;
+}
